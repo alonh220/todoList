@@ -1,9 +1,9 @@
 <section>
-  <app-todo-list-bar></app-todo-list-bar>
-  <div class="ist-group">
-    <div class="list-group-item list-group-item-action" *ngFor="let todo of  todoList$ | async">
-        <app-todo-list  [todoObj]="todo" ></app-todo-list>
-        
+    <app-todo-list-bar></app-todo-list-bar>
+    <div class="ist-group">
+        <div class="list-group-item list-group-item-action" *ngFor="let todo of  todoList$ | async">
+            <app-todo-list [todoObj]="todo"></app-todo-list>
+
         </div>
-  </div>
+    </div>
 </section>

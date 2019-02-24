@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Store, select } from '@ngrx/store';
 import TodoList from '../../TodoList';
-import {TodolistService} from '../../todolist.service';
+import { TodolistService } from '../../todolist.service';
 import { DeleteTodo } from 'src/app/stores/todoList.actions';
 @Component({
   selector: 'app-todo-list',
@@ -12,16 +12,13 @@ import { DeleteTodo } from 'src/app/stores/todoList.actions';
 export class TodoListComponent implements OnInit {
   @Input() todoObj: TodoList
   constructor(
-              private todolistService:TodolistService,
-              private store: Store<{ todoList: {lists:TodoList[]} } >
+    private todolistService: TodolistService,
+    private store: Store<{ todoList: { lists: TodoList[] } }>
   ) { }
-
-  ngOnInit() {
-  }
-
-  deleteTodo(todolist: TodoList){
+  ngOnInit() { }
+  deleteTodo(todolist: TodoList) {
     this.todolistService.deleteTodo(todolist.id)
-        .subscribe(retult => { this.store.dispatch(new DeleteTodo(todolist));});
-   
+      .subscribe(retult => { this.store.dispatch(new DeleteTodo(todolist)); });
+
   }
 }

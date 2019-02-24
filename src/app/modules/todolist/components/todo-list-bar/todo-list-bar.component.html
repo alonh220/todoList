@@ -1,28 +1,22 @@
 <div class="row bar">
-  
   <div class="col">
-    <div class="">
-    <!-- need to be components -->
-    <div class="input-group mb-3">
-        <div class="input-group-prepend">
-            <button class="btn input-group-text" title="Add todo"
-            (click)="add(todoName.value); todoName.value=''">Add</button>
-            </div>
-      <input #todoName  class="form-control"/>
-      
-</div>
-
-  </div>
-  </div>
-  <div class="col">
+    <div>
+      <!-- need to be components -->
       <div class="input-group mb-3">
-        <!-- need to be components -->
         <div class="input-group-prepend">
-            <span class="input-group-text">Search</span>
+          <button class="btn input-group-text" title="Add todo" (click)="add(todoName.value); todoName.value=''">Add</button>
         </div>
-        <input class="form-control" #searchTodo (input)="search(searchTodo.value)" />
-        
-        
+        <input #todoName class="form-control" />
       </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="input-group mb-3">
+      <!-- need to be components -->
+      <div class="input-group-prepend">
+        <span class="input-group-text">Search</span>
+      </div>
+      <input class="form-control" #searchTodo (input)="search(searchTodo.value)" />
+    </div>
   </div>
 </div>

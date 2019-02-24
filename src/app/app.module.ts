@@ -1,10 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule }    from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
 
 import { AppRoutingModule } from './app-routing.module';
 import { TodolistModule } from './modules/todolist/todolist.module';
+import {LoginModule} from './modules/login/login.module';
 
 import { todoListReducer } from './stores/todoList.reducer';
 import { AppComponent } from './app.component';
@@ -18,13 +19,13 @@ import { ContentComponent } from './shared/layout/content/content.component';
     FooterComponent,
     HeaderComponent,
     ContentComponent,
-    
   ],
-  imports: [ 
+  imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     TodolistModule,
+    LoginModule,
     StoreModule.forRoot({ todoList: todoListReducer })
   ],
   providers: [],

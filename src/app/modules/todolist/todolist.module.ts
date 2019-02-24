@@ -5,7 +5,7 @@ import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { TodoListBarComponent } from './components/todo-list-bar/todo-list-bar.component';
 
 @NgModule({
-  declarations: [TodoListContainerComponent,TodoListComponent, TodoListBarComponent],
+  declarations: [TodoListContainerComponent, TodoListComponent, TodoListBarComponent],
   imports: [
     CommonModule
   ]

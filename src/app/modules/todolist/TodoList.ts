@@ -1,4 +1,4 @@
-export default class TodoList{
+export default class TodoList {
     id: Number;
     todo: string;
 }
